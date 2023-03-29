@@ -5,27 +5,33 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
+import com.example.projekt_androidutveckling.databinding.FragmentCreateAccountBinding
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SignInFragment : Fragment() {
-
+class CreateAccountFragment : Fragment() {
     // SetUp Binding
-    private lateinit var binding: FragmentSignInBinding
-    // Initialize Database reference
+    private lateinit var binding: FragmentCreateAccountBinding
+    // SetUp Database reference
     private lateinit var db: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate the layout for this fragment
 
         // SetUp ViewBinding
-        binding = FragmentSignInBinding.inflate(layoutInflater, container, false)
+        binding = FragmentCreateAccountBinding.inflate(layoutInflater, container, false)
 
         val view = binding.root
 
@@ -34,20 +40,20 @@ class SignInFragment : Fragment() {
             .getReference("users")
 
         // ID's
-        val etUserName = binding.etUsername
-        val etUserPassword = binding.etUserpassword
-        val btnSignIn = binding.btnSignIn
+        val etNewUsername = binding.etNewUsername
+        val etNewUserPassword = binding.etNewUserPassword
+        val btnCreate = binding.btnCreate
 
         var listOfUsers = arrayListOf<Users>()
 
         // On SignIn - Check name and password
-        btnSignIn.setOnClickListener(){
+        btnCreate.setOnClickListener(){
 
-            val userName = etUserName.text.toString()
-            val userPassword = etUserPassword.text.toString()
+            val NewUsername = etNewUsername.text.toString()
+            val NewUserPassword = etNewUserPassword.text.toString()
 
             // Creates a new user
-            val newUser = Users(userName, userPassword, true)
+            val newUser = Users(NewUsername, NewUserPassword, true)
 
             //
             db.push()
@@ -63,6 +69,4 @@ class SignInFragment : Fragment() {
 
         return view
 
-    }
-
-}
+}}

@@ -4,33 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DED1B4"
-    tools:context=".SignInFragment">
+    tools:context=".CreateAccountFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_signIn"
+            android:id="@+id/tv_createAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="Create Account"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/et_username"
+            android:id="@+id/et_newUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Name"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Name"/>
+            android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/et_userpassword"
+            android:id="@+id/et_newUserPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -38,11 +37,12 @@
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/btn_signIn"
+            android:id="@+id/btn_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#A67A5B"
-            android:text="Sign in" />
+            android:text="create" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 </FrameLayout>
