@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBC4A0"
-    tools:context=".HomeFragment">
+    android:background="#DED1B4"
+    tools:context=".SignInFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -14,28 +14,35 @@
         >
 
         <TextView
-            android:id="@+id/tv_home"
+            android:id="@+id/tv_SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
+            android:text="Sign In"
             android:textSize="24sp" />
 
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:hint="Name"/>
+
+        <EditText
+            android:id="@+id/et_userPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:minHeight="48dp" />
+
         <Button
-            android:id="@+id/btn_about"
+            android:id="@+id/btn_SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#A67A5B"
-            android:text="About"
-            android:textSize="24sp" />
-
-        <Button
-            android:id="@+id/btn_LogIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#A67A5B"
-            android:text="LogIn"
-            android:textSize="24sp"
-            />
+            android:text="Sign in" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

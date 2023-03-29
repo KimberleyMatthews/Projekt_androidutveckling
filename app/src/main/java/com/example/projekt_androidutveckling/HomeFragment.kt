@@ -27,11 +27,17 @@ class HomeFragment : Fragment() {
 
         val view = binding.root
 
-        val btnAbout = binding.btnAbout
 
-        // OnClickListener for about button - goes from home to about
+        // ID's
+        val btnAbout = binding.btnAbout
+        val btnLogIn = binding.btnLogIn
+
+        // OnClickListener for about buttons - goes from home to about or sign in
         btnAbout.setOnClickListener(){
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_aboutFragment2)
+        }
+        btnLogIn.setOnClickListener(){
+            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_signInFragment)
         }
 
     return view
