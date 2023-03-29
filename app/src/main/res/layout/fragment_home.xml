@@ -13,17 +13,20 @@
         android:orientation="vertical"
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="34sp"
-        android:text="Home" />
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="24sp" />
 
         <Button
+            android:id="@+id/btn_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#A67A5B"
-            android:text="About" />
+            android:text="About"
+            android:textSize="24sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

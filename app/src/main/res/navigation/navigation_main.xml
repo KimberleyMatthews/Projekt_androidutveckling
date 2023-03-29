@@ -10,11 +10,9 @@
         android:name="com.example.projekt_androidutveckling.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
         <action
-            android:id="@+id/action_homeFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
-        <action
-            android:id="@+id/action_homeFragment_to_aboutFragment"
+            android:id="@+id/action_homeFragment_to_aboutFragment2"
             app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
