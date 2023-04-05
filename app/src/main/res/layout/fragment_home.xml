@@ -3,39 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBC4A0"
+    android:background="#4A4A4A"
     tools:context=".HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
-            android:textSize="24sp" />
+            android:text="Hello and welcome to Noughts and Crosses!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:padding="20sp"
+            android:textSize="28sp" />
 
         <Button
             android:id="@+id/btn_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A67A5B"
+            android:backgroundTint="#aaf0d1"
             android:text="About"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_LogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A67A5B"
+            android:backgroundTint="#aaf0d1"
             android:text="LogIn"
-            android:textSize="24sp"
-            />
+            android:textSize="16sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

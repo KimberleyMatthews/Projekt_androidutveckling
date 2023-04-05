@@ -4,30 +4,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutFragment"
-    android:background="#DED1B4"
+    android:background="#4A4A4A"
     >
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#aaf0d1"
+        android:text="Home"
+        android:textSize="24sp" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About"
-            android:textSize="24sp" />
+            android:padding="20sp"
+            android:paddingBottom="20sp"
+            android:text="Noughts and crosses"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/btn_home"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:backgroundTint="#A67A5B"
-            android:text="Home" />
+            android:padding="20sp"
+            android:text=" In the games of Noughts and Crosses you want to fill three squares in a row with your noughts or crosses. The winner is the person who manages to fill three squares in a row, either across, down or diagonally"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

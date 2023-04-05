@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DED1B4"
+    android:background="#4A4A4A"
     tools:context=".CreateAccountFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
+            android:textColor="@color/white"
             android:textSize="24sp" />
 
         <EditText
@@ -26,6 +27,7 @@
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
+            android:textColorHint="@color/white"
             android:minHeight="48dp" />
 
         <EditText
@@ -34,13 +36,14 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password"
+            android:textColorHint="@color/white"
             android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btn_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A67A5B"
+            android:backgroundTint="#aaf0d1"
             android:text="create" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_signInFragment_to_createAccountFragment"
             app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_inloggedFragment"
+            app:destination="@id/inloggedFragment" />
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
@@ -47,5 +50,13 @@
         <action
             android:id="@+id/action_createAccountFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_inloggedFragment"
+            app:destination="@id/inloggedFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/inloggedFragment"
+        android:name="com.example.projekt_androidutveckling.InloggedFragment"
+        android:label="fragment_inlogged"
+        tools:layout="@layout/fragment_inlogged" />
 </navigation>
