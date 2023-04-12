@@ -40,7 +40,10 @@
             app:destination="@id/createAccountFragment" />
         <action
             android:id="@+id/action_signInFragment_to_inloggedFragment"
-            app:destination="@id/inloggedFragment" />
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
@@ -52,11 +55,14 @@
             app:destination="@id/signInFragment" />
         <action
             android:id="@+id/action_createAccountFragment_to_inloggedFragment"
-            app:destination="@id/inloggedFragment" />
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/inloggedFragment"
-        android:name="com.example.projekt_androidutveckling.InloggedFragment"
-        android:label="fragment_inlogged"
-        tools:layout="@layout/fragment_inlogged" />
+        android:id="@+id/gameFragment"
+        android:name="com.example.projekt_androidutveckling.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
 </navigation>
