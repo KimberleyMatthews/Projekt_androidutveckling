@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -53,16 +54,25 @@ class SignInFragment : Fragment() {
             db.push()
                 .setValue(newUser)
                 .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "Success: $newUser was inserted", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Success: $newUser was inserted",
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    // Navigates from SignInFragment to GameFragment
+                    btnSignIn.setOnClickListener {    Navigation.findNavController(view)
+                        .navigate(R.id.action_signInFragment_to_gameFragment)
+                    }
 
                 }.addOnFailureListener{
-                    Toast.makeText(requireContext(), "Failure: Something went wrong $it", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Failure: Something went wrong $it",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
-
         }
-
         return view
-
     }
-
 }
