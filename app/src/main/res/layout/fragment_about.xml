@@ -11,7 +11,7 @@
         android:id="@+id/btn_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="#aaf0d1"
+        android:backgroundTint="#3eb489"
         android:text="Home"
         android:layout_marginTop="20sp"
         android:layout_marginStart="20sp"

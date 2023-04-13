@@ -20,7 +20,6 @@ class CreateAccountFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -49,13 +48,13 @@ class CreateAccountFragment : Fragment() {
         // On SignIn - Check name and password
         btnCreate.setOnClickListener(){
 
-            val NewUsername = etNewUsername.text.toString()
-            val NewUserPassword = etNewUserPassword.text.toString()
+            val newUsername = etNewUsername.text.toString()
+            val newUserPassword = etNewUserPassword.text.toString()
 
             // Creates a new user
-            val newUser = Users(NewUsername, NewUserPassword, true)
+            val newUser = Users(newUsername, newUserPassword, true)
 
-            //
+            // Log in Toast
             db.push()
                 .setValue(newUser)
                 .addOnSuccessListener {

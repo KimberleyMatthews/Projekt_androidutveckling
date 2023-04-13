@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
-import com.example.projekt_androidutveckling.databinding.FragmentInloggedBinding
+import com.example.projekt_androidutveckling.databinding.FragmentGameBinding
 
 class GameFragment : Fragment()
 {
@@ -22,12 +22,12 @@ class GameFragment : Fragment()
 
     private var boardList = mutableListOf<Button>()
 
-    private lateinit var binding : FragmentInloggedBinding
+    private lateinit var binding : FragmentGameBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = FragmentInloggedBinding.inflate(layoutInflater)
+        binding = FragmentGameBinding.inflate(layoutInflater)
         (binding.root)
         initBoard()
     }

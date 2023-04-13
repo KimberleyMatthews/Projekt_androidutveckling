@@ -21,7 +21,8 @@ class SignInFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
@@ -50,7 +51,13 @@ class SignInFragment : Fragment() {
             // Creates a new user
             val newUser = Users(userName, userPassword, true)
 
-            //
+            // Navigates from SignInFragment to GameFragment
+            Navigation.findNavController(view)
+                .navigate(R.id.action_signInFragment_to_gameFragment)
+
+
+            /*
+            // Toast for success/failure sign in
             db.push()
                 .setValue(newUser)
                 .addOnSuccessListener {
@@ -60,18 +67,15 @@ class SignInFragment : Fragment() {
                         Toast.LENGTH_LONG
                     ).show()
 
-                    // Navigates from SignInFragment to GameFragment
-                    btnSignIn.setOnClickListener {    Navigation.findNavController(view)
-                        .navigate(R.id.action_signInFragment_to_gameFragment)
-                    }
-
                 }.addOnFailureListener{
                     Toast.makeText(
                         requireContext(),
                         "Failure: Something went wrong $it",
                         Toast.LENGTH_LONG
                     ).show()
-                }
+                }*/
+
+
         }
         return view
     }

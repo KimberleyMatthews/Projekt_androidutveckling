@@ -44,7 +44,7 @@
             android:id="@+id/btn_signIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#aaf0d1"
+            android:backgroundTint="#3eb489"
             android:text="Sign in" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
