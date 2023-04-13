@@ -24,6 +24,9 @@ class GameFragment : Fragment()
 
     private lateinit var binding : FragmentGameBinding
 
+    // TODO - Make ViewModel work to collect scores for players
+    // TODO - Initialize ViewModel in THIS fragment
+    private lateinit var score: ScoreViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -152,6 +155,7 @@ class GameFragment : Fragment()
     companion object {
         const val NOUGHT = "0"
         const val CROSS = "X"
+
     }
 
 }

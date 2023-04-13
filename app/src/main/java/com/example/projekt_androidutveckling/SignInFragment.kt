@@ -55,28 +55,8 @@ class SignInFragment : Fragment() {
             Navigation.findNavController(view)
                 .navigate(R.id.action_signInFragment_to_gameFragment)
 
-
-            /*
-            // Toast for success/failure sign in
-            db.push()
-                .setValue(newUser)
-                .addOnSuccessListener {
-                    Toast.makeText(
-                        requireContext(),
-                        "Success: $newUser was inserted",
-                        Toast.LENGTH_LONG
-                    ).show()
-
-                }.addOnFailureListener{
-                    Toast.makeText(
-                        requireContext(),
-                        "Failure: Something went wrong $it",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }*/
-
-
         }
+
         return view
     }
 }

@@ -27,7 +27,6 @@ class HomeFragment : Fragment() {
 
         val view = binding.root
 
-
         // ID's
         val btnAbout = binding.btnAbout
         val btnLogIn = binding.btnLogIn

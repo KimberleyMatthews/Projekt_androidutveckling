@@ -54,7 +54,7 @@ class CreateAccountFragment : Fragment() {
             // Creates a new user
             val newUser = Users(newUsername, newUserPassword, true)
 
-            // Log in Toast
+            // Toast for success or failure
             db.push()
                 .setValue(newUser)
                 .addOnSuccessListener {
