@@ -47,5 +47,12 @@
             android:backgroundTint="#3eb489"
             android:text="Sign in" />
 
+        <Button
+            android:id="@+id/btn_CreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4A4A4A"
+            android:text="Create Account"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

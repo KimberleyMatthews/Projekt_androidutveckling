@@ -1,12 +1,18 @@
 package com.example.projekt_androidutveckling
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.SpannedString
+import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -20,6 +26,7 @@ class SignInFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +46,9 @@ class SignInFragment : Fragment() {
         val etUserName = binding.etUsername
         val etUserPassword = binding.etUserpassword
         val btnSignIn = binding.btnSignIn
+        val btnCreateAccount = binding.btnCreateAccount
+
+        //TODO - create onClick for btnCreateAccount
 
         var listOfUsers = arrayListOf<Users>()
 
@@ -57,6 +67,13 @@ class SignInFragment : Fragment() {
 
         }
 
+        // On Create Account
+        btnCreateAccount.setOnClickListener(){
+            findNavController()
+                .navigate(R.id.action_signInFragment_to_createAccountFragment)
+        }
+
         return view
     }
+
 }

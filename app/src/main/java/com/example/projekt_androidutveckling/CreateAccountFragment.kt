@@ -1,14 +1,18 @@
 package com.example.projekt_androidutveckling
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.projekt_androidutveckling.databinding.FragmentCreateAccountBinding
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -17,11 +21,14 @@ class CreateAccountFragment : Fragment() {
     private lateinit var binding: FragmentCreateAccountBinding
     // SetUp Database reference
     private lateinit var db: DatabaseReference
+    // SetUp SnackBar
+    private lateinit var btnCreate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
+    @SuppressLint("ShowToast")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,7 +48,7 @@ class CreateAccountFragment : Fragment() {
         // ID's
         val etNewUsername = binding.etNewUsername
         val etNewUserPassword = binding.etNewUserPassword
-        val btnCreate = binding.btnCreate
+        var btnCreate = binding.btnCreate
 
         var listOfUsers = arrayListOf<Users>()
 
@@ -64,6 +71,19 @@ class CreateAccountFragment : Fragment() {
                     Toast.makeText(requireContext(), "Failure: Something went wrong $it", Toast.LENGTH_LONG).show()
                 }
 
+            // TODO - make SnackBar instead of Toast!
+            // TODO - IF name and password shorter than 4 letters each...
+        }
+
+        // SnackBar for btnCreate
+        btnCreate = findViewById(R.id.btn_create)
+
+        btnCreate.setOnClickListener() {
+            val create = Snackbar.make(it, "KB CODER", Snackbar.LENGTH_LONG).setAction("Action", null)
+            create.setActionTextColor(Color.WHITE)
+            val createView = create.view
+            createView.setBackgroundColor(Color.BLACK)
+            create.show()
         }
 
         return view
