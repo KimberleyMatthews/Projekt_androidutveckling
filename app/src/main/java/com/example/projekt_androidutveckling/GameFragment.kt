@@ -1,6 +1,7 @@
 package com.example.projekt_androidutveckling
 
 import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
@@ -39,7 +40,9 @@ class GameFragment : Fragment()
         // Setup ViewBinding
         binding = FragmentGameBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+
         initBoard()
+        boardTapped(view = view)
 
         return view
     }
@@ -55,7 +58,7 @@ class GameFragment : Fragment()
         boardList.add(binding.c2)
         boardList.add(binding.c3)
     }
-    fun boardTapped(view: View) {
+    fun boardTapped(view : View) {
         if (view !is Button)
             return
         addToBoard(view)

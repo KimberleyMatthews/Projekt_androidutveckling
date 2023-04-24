@@ -11,13 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/noughtsncrosses">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/noughtsncrosses" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:layout_marginHorizontal="50dp"
+            android:background="#54BDA480">
 
         <TextView
             android:id="@+id/tv_home"
@@ -26,7 +30,7 @@
             android:padding="20sp"
             android:text="Hello and welcome to Noughts and Crosses!"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="28sp" />
 
         <Button
@@ -45,5 +49,6 @@
             android:text="LogIn"
             android:textSize="16sp" />
 
+        </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>
