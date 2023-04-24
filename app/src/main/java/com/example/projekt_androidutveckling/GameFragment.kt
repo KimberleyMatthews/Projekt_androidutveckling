@@ -2,13 +2,17 @@ package com.example.projekt_androidutveckling
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.projekt_androidutveckling.databinding.FragmentGameBinding
 
 class GameFragment : Fragment()
 {
+    //Keep track on who's turn it is
     enum class Turn {
         NOUGHT,
         CROSS
@@ -27,12 +31,17 @@ class GameFragment : Fragment()
     // TODO - Make ViewModel work to collect scores for players
     // TODO - Initialize ViewModel in THIS fragment
     private lateinit var score: ScoreViewModel
-    override fun onCreate(savedInstanceState: Bundle?) {
-
-        super.onCreate(savedInstanceState)
-        binding = FragmentGameBinding.inflate(layoutInflater)
-        (binding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        // Setup ViewBinding
+        binding = FragmentGameBinding.inflate(layoutInflater, container, false)
+        val view = binding.root
         initBoard()
+
+        return view
     }
 
     private fun initBoard() {
@@ -47,7 +56,7 @@ class GameFragment : Fragment()
         boardList.add(binding.c3)
     }
     fun boardTapped(view: View) {
-        if(view !is Button)
+        if (view !is Button)
             return
         addToBoard(view)
 

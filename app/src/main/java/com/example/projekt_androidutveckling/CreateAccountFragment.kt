@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.projekt_androidutveckling.databinding.FragmentCreateAccountBinding
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
 import com.google.android.material.snackbar.Snackbar
@@ -22,7 +23,7 @@ class CreateAccountFragment : Fragment() {
     // SetUp Database reference
     private lateinit var db: DatabaseReference
     // SetUp SnackBar
-    private lateinit var btnCreate: Button
+    private lateinit var btnCreateAccount: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +49,7 @@ class CreateAccountFragment : Fragment() {
         // ID's
         val etNewUsername = binding.etNewUsername
         val etNewUserPassword = binding.etNewUserPassword
-        var btnCreate = binding.btnCreate
+        val btnCreate = binding.btnCreate
 
         var listOfUsers = arrayListOf<Users>()
 
@@ -76,16 +77,8 @@ class CreateAccountFragment : Fragment() {
         }
 
         // SnackBar for btnCreate
-        btnCreate = findViewById(R.id.btn_create)
-
-        btnCreate.setOnClickListener() {
-            val create = Snackbar.make(it, "KB CODER", Snackbar.LENGTH_LONG).setAction("Action", null)
-            create.setActionTextColor(Color.WHITE)
-            val createView = create.view
-            createView.setBackgroundColor(Color.BLACK)
-            create.show()
-        }
 
         return view
 
-}}
+}
+}
