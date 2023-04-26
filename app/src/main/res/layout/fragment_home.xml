@@ -49,6 +49,14 @@
             android:text="LogIn"
             android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/btn_joke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#65A890"
+                android:text="Tell me a joke"
+                android:textSize="16sp"/>
+
         </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

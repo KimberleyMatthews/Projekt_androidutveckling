@@ -40,6 +40,10 @@ android {
 
 dependencies {
 
+    // Implementation for API
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // GSON
+
     implementation ("androidx.activity:activity-ktx:1.7.1" )
 
     // Implementation from Firebase (database)

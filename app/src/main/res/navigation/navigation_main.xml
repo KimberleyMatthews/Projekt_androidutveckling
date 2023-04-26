@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homeFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_jokeFragment"
+            app:destination="@id/jokeFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -67,6 +70,15 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_gameFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokeFragment"
+        android:name="com.example.projekt_androidutveckling.FragmentJoke"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_joke" >
+        <action
+            android:id="@+id/action_jokeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
