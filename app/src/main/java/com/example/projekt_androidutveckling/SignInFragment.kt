@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.activity.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.projekt_androidutveckling.databinding.FragmentSignInBinding
@@ -27,7 +28,7 @@ class SignInFragment : Fragment() {
     // Initialize Database reference
     private lateinit var db: DatabaseReference
     // Initiate UIState
-    private val viewModel: ViewModelUser by activityViewModels()
+    private val viewModelUser: ViewModel by activityViewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -63,8 +64,9 @@ class SignInFragment : Fragment() {
 
             // Creates a new user
             val newUser = Users(userName, userPassword, true)
+
             // Getter for ViewModel
-            viewModel.inloggedUser(userName)
+            //viewModelUser.inloggedUser(userName)
 
             // Navigates from SignInFragment to GameFragment
             Navigation.findNavController(view)

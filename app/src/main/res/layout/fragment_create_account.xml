@@ -10,14 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/noughtsncrosses">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:paddingVertical="20dp"
+        android:background="#54BDA480">
 
         <TextView
             android:id="@+id/tv_createAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
-            android:textColor="@color/white"
+            android:textColor="#9A7E56"
             android:textSize="24sp" />
 
         <EditText
@@ -43,8 +54,10 @@
             android:id="@+id/btn_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#3eb489"
+            android:backgroundTint="#65A890"
             android:text="create" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

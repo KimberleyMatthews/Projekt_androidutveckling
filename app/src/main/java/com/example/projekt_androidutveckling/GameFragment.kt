@@ -27,7 +27,7 @@ class GameFragment : Fragment()
 
     private var boardList = mutableListOf<Button>()
 
-    private lateinit var binding : FragmentGameBinding
+    private lateinit var binding: FragmentGameBinding
 
     // TODO - Make ViewModel work to collect scores for players
     // TODO - Initialize ViewModel in THIS fragment
@@ -41,27 +41,30 @@ class GameFragment : Fragment()
         binding = FragmentGameBinding.inflate(layoutInflater, container, false)
         val view = binding.root
 
-        initBoard()
-        boardTapped(view = view)
+        initBoard(view)
 
         return view
     }
 
-    private fun initBoard() {
-        boardList.add(binding.a1)
-        boardList.add(binding.a2)
-        boardList.add(binding.a3)
-        boardList.add(binding.b1)
-        boardList.add(binding.b2)
-        boardList.add(binding.b3)
-        boardList.add(binding.c1)
-        boardList.add(binding.c2)
-        boardList.add(binding.c3)
+    private fun initBoard(view: View) {
+        boardList.addAll(listOf(
+            binding.a1, binding.a2, binding.a3,
+            binding.b1, binding.b2, binding.b3,
+            binding.c1, binding.c2, binding.c3))
+
+        boardList.forEach { button ->
+            button.setOnClickListener {
+                println(currentTurn)
+                println("WAS CLICKED ")
+                boardTapped(view, button.id)
+            }
+        }
     }
-    fun boardTapped(view : View) {
-        if (view !is Button)
-            return
-        addToBoard(view)
+
+    private fun boardTapped(view : View, buttonId: Int) {
+
+        println("#1 DEBUG ")
+        addToBoard(buttonId)
 
         // Check if someone won
         if(checkForVictory(NOUGHT)) {
@@ -138,17 +141,25 @@ class GameFragment : Fragment()
         }
         return true
     }
+    //When button gets pressed
+    private fun addToBoard(buttonId: Int) {
+        val button = binding.root.findViewById<Button>(buttonId)
 
-    private fun addToBoard(button: Button) {
-        if(button.text != "")
+        if(button.text != "") {
+            println("#2 DEBUGGING - IF STATEMENT #1")
             return
+        }
 
         if(currentTurn == Turn.NOUGHT) {
-            button.text = "NOUGHT"
+            println("#2 DEBUGGING - IF STATEMENT #2")
+
+            button.text = "0"
             currentTurn = Turn.CROSS
         }
         else if(currentTurn == Turn.CROSS) {
-            button.text = "CROSS"
+            println("#2 DEBUGGING - IF STATEMENT #3")
+
+            button.text = "X"
             currentTurn = Turn.NOUGHT
         }
        setTurnLabel()

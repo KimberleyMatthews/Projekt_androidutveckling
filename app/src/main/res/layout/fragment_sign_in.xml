@@ -28,7 +28,7 @@
             android:text="Sign In"
             android:textStyle="bold"
             android:padding="10dp"
-            android:textColor="#AF8647"
+            android:textColor="#A5885C"
             android:textSize="44sp" />
 
         <EditText
@@ -56,7 +56,7 @@
             android:id="@+id/btn_signIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#3eb489"
+            android:backgroundTint="#65A890"
             android:padding="10dp"
             android:layout_marginHorizontal="20dp"
             android:text="Sign in" />
@@ -65,7 +65,7 @@
             android:id="@+id/btn_CreateAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#3eb489"
+            android:backgroundTint="#8EBFAD"
             android:padding="10dp"
             android:layout_marginHorizontal="20dp"
             android:text="Create Account"/>

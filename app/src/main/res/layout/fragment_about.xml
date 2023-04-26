@@ -7,23 +7,32 @@
     android:background="#4A4A4A"
     >
 
-    <ImageButton
-        android:id="@+id/btn_home"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#3eb489"
-        android:text="Home"
-        android:layout_marginTop="20sp"
-        android:layout_marginStart="20sp"
-        android:textSize="24sp"
-        android:src="?attr/homeAsUpIndicator"
-        android:contentDescription="HomeButton" />
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/noughtsncrosses">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#BC9965"
+            android:text="@string/home"
+            android:textSize="50sp"
+            android:layout_marginRight="140dp"
+            android:src="?attr/homeAsUpIndicator"
+            android:contentDescription="HomeButton" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="#54BDA480">
 
         <TextView
             android:id="@+id/tv_about"
@@ -33,9 +42,10 @@
             android:paddingBottom="20sp"
             android:text="Noughts and crosses"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textColor="#9A7E56"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/textView"
@@ -44,8 +54,12 @@
             android:padding="20sp"
             android:text=" In the games of Noughts and Crosses you want to fill three squares in a row with your noughts or crosses. The winner is the person who manages to fill three squares in a row, either across, down or diagonally"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="22sp" />
+            android:textColor="#9A7E56"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

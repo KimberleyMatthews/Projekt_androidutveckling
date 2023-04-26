@@ -30,14 +30,14 @@
             android:padding="20sp"
             android:text="Hello and welcome to Noughts and Crosses!"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="#9A7E56"
             android:textSize="28sp" />
 
         <Button
             android:id="@+id/btn_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#3eb489"
+            android:backgroundTint="#65A890"
             android:text="About"
             android:textSize="16sp" />
 
@@ -45,7 +45,7 @@
             android:id="@+id/btn_LogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#3eb489"
+            android:backgroundTint="#65A890"
             android:text="LogIn"
             android:textSize="16sp" />
 
