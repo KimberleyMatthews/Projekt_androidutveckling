@@ -1,13 +1,14 @@
 package com.example.projekt_androidutveckling.api
 
 // Template from API Object
-class API {
+data class API (
 
-    val image: String = "https://geek-jokes.sameerkumar.website/api?format=json"
-    val link: String = "https://geek-jokes.sameerkumar.website/api?format=json"
+    var quote : String = "",
+    var author : String = ""
 
+) {
     override fun toString(): String {
-        return "API(image='$image', link='$link')"
+        return "API(quote='$quote', author='$author')"
     }
 
 }

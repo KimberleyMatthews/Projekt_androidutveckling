@@ -13,6 +13,18 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tv_Joke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joke API"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/btn_Quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Quote" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

@@ -5,7 +5,6 @@ import retrofit2.http.GET
 
 interface JokeApi {
 
-    @GET("api?format=json")
-    fun getJoke(): Call<API>
-
+    @GET("/inspiration")
+    fun getInspiration(): Call<API>
 }
