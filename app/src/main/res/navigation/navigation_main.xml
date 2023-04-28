@@ -76,7 +76,7 @@
         android:id="@+id/jokeFragment"
         android:name="com.example.projekt_androidutveckling.FragmentJoke"
         android:label="fragment_blank"
-        tools:layout="@layout/fragment_joke" >
+        tools:layout="@layout/fragment_quote" >
         <action
             android:id="@+id/action_jokeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

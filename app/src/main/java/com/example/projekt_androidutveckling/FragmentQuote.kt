@@ -6,18 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.get
+
 import com.example.projekt_androidutveckling.api.API
 import com.example.projekt_androidutveckling.api.JokeApi
-import com.example.projekt_androidutveckling.databinding.FragmentGameBinding
-import com.example.projekt_androidutveckling.databinding.FragmentJokeBinding
+import com.example.projekt_androidutveckling.databinding.FragmentQuoteBinding
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
 class FragmentJoke : Fragment() {
 
     // Setup ViewBinding
-    private lateinit var binding: FragmentJokeBinding
+    private lateinit var binding: FragmentQuoteBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,13 +29,12 @@ class FragmentJoke : Fragment() {
     ): View {
 
         // Inflate setup
-        binding = FragmentJokeBinding.inflate(layoutInflater, container, false)
+        binding = FragmentQuoteBinding.inflate(layoutInflater, container, false)
 
         val view = binding.root
-
-        val tvJoke = binding.tvJoke
-
+        val tvQuote = binding.tvQuote
         val btnQuote = binding.btnQuote
+
         btnQuote.setOnClickListener(){
 
             val retrofit = Retrofit.Builder()
@@ -57,7 +55,7 @@ class FragmentJoke : Fragment() {
                         println(api)
 
                         if (api !=null) { // Will not be NULL
-                            tvJoke.text = api.quote
+                            tvQuote.text = api.quote
                         }
 
                     } else {

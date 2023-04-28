@@ -14,10 +14,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_Joke"
+            android:id="@+id/tv_quote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Joke API"
+            android:text="I need a quote..."
             android:textSize="40sp" />
 
         <Button
